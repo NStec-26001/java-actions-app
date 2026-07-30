@@ -14,10 +14,10 @@ jobs:
     - name: リポジトリのチェックアウト
       uses: actions/checkout@v4
 
-    - name: JDK 21のセットアップ (Temurin)
+    - name: JDK 17のセットアップ (Temurin)
       uses: actions/setup-java@v4
       with:
-        java-version: '21'
+        java-version: '17'
         distribution: 'temurin'
         cache: 'gradle'
 
