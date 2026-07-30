@@ -18,12 +18,41 @@ repositories {
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter'
+    // 🌐 Web & 基本機能
+    implementation 'org.springframework.boot:spring-boot-starter'
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-aop'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
 
+    // 🔐 ログイン・セキュリティ
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+
+    // 🎨 画面表示 (Thymeleaf)
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect'
+    // 💡 HTML内で sec:authorize を使ってボタンの出し分けをするなら、以下の1行を追加するのがおすすめです
+    implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity6'
+
+    // 💾 データベース (MyBatis, JPA, PostgreSQL)
+    implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.4'
+    implementation 'org.postgresql:postgresql'
+    implementation 'org.springframework.data:spring-data-commons'
+
+    // 📊 便利ツール (CSV操作)
+    implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-csv'
+
+    // ☕ コード簡略化 (Lombok)
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+    // 🧪 テスト環境
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter-test:3.0.4'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
+
 
 tasks.named('test') {
 	useJUnitPlatform()
