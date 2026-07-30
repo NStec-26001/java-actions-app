@@ -1,4 +1,4 @@
-package com.example.java_actions_app.service;
+package com.example.demo.service;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
