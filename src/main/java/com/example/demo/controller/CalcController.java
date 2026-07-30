@@ -8,8 +8,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.example.demo.service.CalcService;
 
+
+
 /**
- * 計算コントローラークラス
+ * 計算コントローラークラスaaa
  */
 @Controller
 public class CalcController {
