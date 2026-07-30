@@ -6,6 +6,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
 
 import org.junit.jupiter.api.DisplayName;
+
+
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -24,13 +26,13 @@ public class CalcControllerTest {
      * MockMvcを注入してコントローラーのテストを行うためのフィールド
      */
     @Autowired
-    private MockMvc mockMvc;
+                                                                         private MockMvc mockMvc;
 
     @Test
     @DisplayName("結合テスト: 足し算のPOSTリクエストで、正しく計算結果が画面(Model)に渡されること")
     void testCalculateMvc() throws Exception {
-        // フォームからのPOST送信をシミュレート
-        mockMvc.perform(post("/calc")
+                                             // フォームからのPOST送信をシミュレート
+                                                                               mockMvc.perform(post("/calc")
                 .param("v1", "10")
                 .param("v2", "20")
                 .param("op", "+"))
