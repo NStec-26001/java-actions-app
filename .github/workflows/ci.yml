@@ -33,3 +33,4 @@ jobs:
 
     - name: 単体・結合テストの実行
       run: ./gradlew test
+      
